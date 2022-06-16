@@ -1,0 +1,40 @@
+﻿@model Persona
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <h1 class="text-center">Inicio de sesion</h1>
+        <form asp-controller="Home" asp-action="NuevaPersona">
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Apellido</label>
+                <input type="text" class="form-control" asp-for="Lastname">
+                <span asp-validation-for="Lastname" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">DNI</label>
+                <input type="text" class="form-control" asp-for="DNI">
+                <span asp-validation-for="DNI" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Edad</label>
+                <input type="text" class="form-control" asp-for="Edad">
+                <span asp-validation-for="Edad" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+        </form>
+
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
